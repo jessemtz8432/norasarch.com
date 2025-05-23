@@ -19,9 +19,11 @@
         }
         
      .hero {
-    background: url('images/IMG_0118.jpg');
-    background-size: cover;
-    background-position: center;
+    background: 
+		url('images/IMG_0118.jpg'),
+		url("images/IMG_0118-1.jpg");
+    background-size: contain, cover;
+    background-position: right;
     background-repeat: no-repeat;
     width: 100%;
     height: 500px; /* Adjust as needed */
@@ -31,7 +33,6 @@
     justify-content: center;
     text-align: center;
     padding: 2rem;
-}
 }
        
         .service-card:hover {
@@ -65,9 +66,7 @@
   <span class="text-xl font-semibold heading-font text-gray-800">Nora's Arch</span>
 </a>
 
-    </a>
-</div>
-                <div class="hidden md:block">
+               <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-8">
                         <a href="#home" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Home</a>
                         <a href="#services" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Services</a>
@@ -99,8 +98,7 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
+<!-- Hero Section -->
     <section id="home" class="hero pt-32 pb-20 md:pt-40 md:pb-32 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:w-1/2">
