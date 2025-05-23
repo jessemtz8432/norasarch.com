@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nora's Arch - Professional Eyebrow Waxing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+     .hero {
+    background: url('images/IMG_0118.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+}
+       
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #d4a373;
+            transition: width .3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+    <a href="#home" class="flex items-center space-x-3">
+  <img src="images/logo.jpg" alt="Nora's Arch Logo" class="h-20 object-contain">
+  <span class="text-xl font-semibold heading-font text-gray-800">Nora's Arch</span>
+</a>
+
+    </a>
+</div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#services" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#about" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#gallery" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Gallery</a>
+                        <a href="#contact" class="nav-link text-gray-800 hover:text-gray-900 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="https://noras-arch.square.site/" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">
+  Book Now
+</a>
+
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-gray-900">Home</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-gray-900">Services</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-gray-900">About</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-gray-900">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-gray-900">Contact</a>
+                <a href="#booking" class="block w-full text-center bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-base font-medium mt-2">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero pt-32 pb-20 md:pt-40 md:pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold heading-font mb-6">Brow Perfection Starts with Nora</h1>
+                <p class="text-lg md:text-xl mb-8">Professional eyebrow waxing services to enhance your natural beauty and frame your face perfectly.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://noras-arch.square.site/" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-medium text-center transition duration-300">
+  Book Appointment
+</a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full text-lg font-medium text-center transition duration-300">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold heading-font text-gray-800 mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-eye text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Brow Shaping + Hybrid Tint</h3>
+                                               <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$30</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/UNUZW4EQAGTU4WYSBBSD4NRP" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-700 font-medium">
+  Book Now
+</a>
+
+                        </div>
+                  </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-spa text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Hybrid Tint</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$15</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/SCYAITYOHTEBG5WDFZOLDBWP" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-700 font-medium">
+  Book Now
+</a>
+
+                        </div>
+                  </div>
+              </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-magic text-6xl text-amber-600"></i>
+                    </div>
+					
+					
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Lamination (includes Tint)&nbsp;</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$65</span>
+                           <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/AFAOLSTDUZN32QONIPHOVK6W" target="_blank" rel="noopener noreferrer" class="text-amber-600 hover:text-amber-700 font-medium">Book Now</a>
+
+                          </div>
+                  </div>
+              </div>
+				 <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-eye text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Legs</h3>
+                                               <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$40</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/OX23CBOGL4AY4ODL4XHINL4G" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+
+                        </div>
+                  </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-spa text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Lash Lift</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$55</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/PZQ4WGYRQ66U5FK4BXOFGYV5" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                        </div>
+                  </div>
+              </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-magic text-6xl text-amber-600"></i>
+                    </div>
+					
+					
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Sideburns (Wax)</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$15</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/PU7XO77RSHUGPHNGMJ2ILN2A" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                            </div>
+                  </div>
+              </div>
+                <!-- Service 7 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-eye text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Forehead</h3>
+                                               <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$7</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/3SEYEISALXK7FXXNH326LDN4" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                        </div>
+                  </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-spa text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Chin</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$7</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/6R6KKLZYZK2FZQY4KRMJLY4G" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                        </div>
+                  </div>
+              </div>
+                
+                <!-- Service 9 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-magic text-6xl text-amber-600"></i>
+                    </div>
+					
+					
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Lip (Wax)</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$5</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/JJLMSDFAWJHR5XJXTUXGRY4K" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                          </div>
+                  </div>
+              </div>
+					<!-- Service 10 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-eye text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Underarms</h3>
+                                               <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$15</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/QVAUVFKUDTJAMHI5DKRZVEUE" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                        </div>
+                  </div>
+                </div>
+                
+                <!-- Service 11 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-spa text-6xl text-amber-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Brow Shaping</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$15</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/U2U5DUHGE4RYJE6XURTXLY3Z" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                        </div>
+                  </div>
+              </div>
+                
+                <!-- Service 12 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-magic text-6xl text-amber-600"></i>
+                    </div>
+					
+					
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold heading-font text-gray-800 mb-2">Brows and Lip</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-600 font-bold text-lg">$25</span>
+                            <a href="https://book.squareup.com/appointments/10229fb0-51f6-4215-aa51-4b1b39464635/location/04080XS5N72S6/services/ZTWD2P5GS7VS5AD6MBQWD3SR" class="text-amber-600 hover:text-amber-700 font-medium" target="_blank" rel="noopener noreferrer">Book Now</a>
+                          </div>
+                  </div>
+              </div>	
+						
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+              <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <img src="images/IMG_0119.jpg" alt="Nora" class="rounded-lg shadow-xl">
+
+              </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold heading-font text-gray-800 mb-6">About Nora</h2>
+                    <p class="text-gray-600 mb-4">Welcome to Nora’s Arch, where brows aren’t just shaped, they’re sculpted to perfection. As the owner and operator, I bring over 17+ years of hands-on experience in eyebrow artistry, earning a reputation as a true perfectionist and master of my craft. My goal is simple: to enhance your natural beauty through precise, custom-tailored eyebrow shaping that flatters your individual features.</p>
+                    <p class="text-gray-600 mb-6">I’ve built a loyal clientele by consistently delivering exceptional results in a clean, welcoming, and professional environment. Every appointment is a personalized experience, no rushed sessions or one-size-fits-all treatments. Whether you’re looking for subtle refinement or a complete brow transformation, you can expect expert technique, hygienic practices, and a genuine passion for what I do. At Nora’s Arch, your brows are in the hands of someone who treats them like art.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://noras-arch.square.site/" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-medium text-center transition duration-300">
+  Book Now
+</a>
+
+                        <a href="#contact" class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full text-lg font-medium text-center transition duration-300">Contact Us</a>
+                    </div>
+					
+					
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold heading-font text-gray-800 mb-4">Our Work</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_1.jpg" alt="Gallery 1" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_2.jpg" alt="Gallery 2" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_3.jpg" alt="Gallery 3" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_4.jpg" alt="Gallery 4" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_5.jpg" alt="Gallery 5" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+  <div class="overflow-hidden rounded-lg shadow-lg">
+    <img src="images/gallery_6.jpg" alt="Gallery 6" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+  </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold heading-font text-gray-800 mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Nora is absolutely amazing! She took the time to understand my face shape and gave me the perfect brows. I've never received so many compliments!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah J.</h4>
+                            <p class="text-gray-500 text-sm">Regular Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I've been going to Nora for years and wouldn't trust anyone else with my brows. She's precise, professional, and makes the experience so comfortable."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Jessica M.</h4>
+                            <p class="text-gray-500 text-sm">Regular Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"First time getting my brows done and Nora made me feel so comfortable. She explained everything and gave me brows that perfectly suit my face. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Emily" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Emily T.</h4>
+                            <p class="text-gray-500 text-sm">New Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold heading-font text-gray-800 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold heading-font text-gray-800 mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-amber-600 text-xl mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Location</h4>
+                              <p class="text-gray-600">418 New Market Road West</p>
+                                <p class="text-gray-600">Immokalee, Fl 34142&nbsp; &nbsp; &nbsp;&nbsp;
+                                  </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-amber-600 text-xl mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Phone</h4>
+                                <p class="text-gray-600">(239)900-4466</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-amber-600 text-xl mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">norasarch39@gmail.com&nbsp;</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-amber-600 text-xl mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-800">Hours</h4>
+                              <p class="text-gray-600"> Monday:&nbsp; Closed</p>
+                              <p class="text-gray-600">Tuesday: 11:00 am - 3:15 pm, 4:30 pm - 5:45 pm</p>
+                              <p class="text-gray-600">Wednesday: 11:30 am - 3:15 pm&nbsp;</p>
+                              <p class="text-gray-600">Thursday: 11:00 am - 3:15 pm, 4:30 pm - 5:45 pm&nbsp;</p>
+                              <p class="text-gray-600">Friday: 11:30 am - 3:15 pm, 4:30 pm - 5:45 pm&nbsp;</p>
+                              <p class="text-gray-600">Saturday: 8:00 am - 9:00 am&nbsp;</p>
+                                <p class="text-gray-600">Sunday: Closed &nbsp;</p>
+<p class="text-gray-600">&nbsp; &nbsp; &nbsp; &nbsp; </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=100038685072767" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-amber-600 text-xl">
+  <i class="fab fa-facebook-f"></i>
+</a>
+<a href="https://www.instagram.com/norasarch_/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-amber-600 text-xl">
+  <i class="fab fa-instagram"></i>
+</a>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold heading-font text-gray-800 mb-6">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold heading-font mb-4">Nora's Arch</h3>
+                    <p class="text-gray-400">Professional eyebrow waxing and shaping services to enhance your natural beauty.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Eyebrow Waxing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Brow Tinting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Brow Lamination</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Full Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <address class="not-italic text-gray-400">
+                        <p>418 New Market Road West&nbsp;</p>
+                        <p>Immokalee, Florida 34142</p>
+                        <p class="mt-2">Phone: (239)900-4466</p>
+                        <p>Email: norasarch39@gmail.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Nora's Arch. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://www.facebook.com/profile.php?id=100038685072767" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-amber-600 text-xl">
+  <i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/norasarch_/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-amber-600 text-xl">
+  <i class="fab fa-instagram"></i>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Calculate position with offset for fixed header
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
