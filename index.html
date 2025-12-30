@@ -874,6 +874,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       box-shadow:0 10px 25px rgba(0,0,0,.35);
     }
     #ny-skip:hover{ background:rgba(0,0,0,.75); }
+    /* Mobile fixes: prevent "Happy New Year" from being cut off on narrow screens */
+    #ny-text{ max-width:min(94vw, 980px); }
+
+    @media (max-width: 520px){
+      #ny-text{
+        top:8%;
+        padding:22px 18px 18px;
+        border-radius:16px;
+      }
+      .ny-gold{
+        /* allow wrapping + slightly smaller size on phones */
+        white-space:normal;
+        font-size:clamp(46px, 13vw, 74px);
+        letter-spacing:0.01em;
+      }
+    }
+
 
     @media (prefers-reduced-motion: reduce){
       #ny-overlay{ display:none; }
