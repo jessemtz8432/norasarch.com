@@ -879,15 +879,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     @media (max-width: 520px){
       #ny-text{
-        top:8%;
-        padding:22px 18px 18px;
+        top:6%;
+        padding:20px 14px 18px;
         border-radius:16px;
       }
       .ny-gold{
-        /* allow wrapping + slightly smaller size on phones */
-        white-space:normal;
-        font-size:clamp(46px, 13vw, 74px);
-        letter-spacing:0.01em;
+        /* keep single line, scale to screen width */
+        white-space:nowrap;
+        font-size:12vw;
+        letter-spacing:-0.01em;
       }
     }
 
