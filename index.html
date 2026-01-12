@@ -767,45 +767,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             });
         });
-    </script>
-	<!-- Snow Effect -->
-    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-    <script>
-      new Snowflakes({
-        count: 80,      // number of snowflakes
-        maxSize: 40,    // max snowflake size (px)
-        speed: 1.2,     // falling speed
-        wind: false     // no sideways wind
-      });
-    </script>
-    <!-- End Snow Effect -->
-
-    <!-- Sleigh Bells Audio -->
-    <audio id="sleighAudio" preload="auto">
-      <source src="https://cdn.pixabay.com/download/audio/2022/12/08/audio_13f95ae538.mp3?filename=santa-sleigh-bells-128441.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-      // Play sleigh bells on first user interaction (required by browsers)
-      let sleighPlayed = false;
-
-      function playSleighBells() {
-        if (!sleighPlayed) {
-          const audio = document.getElementById('sleighAudio');
-          audio.volume = 0.25; // soft volume
-          audio.play().catch(() => { /* ignore autoplay blocks */ });
-          sleighPlayed = true;
-        }
-      }
-
-      // Listen for first tap/click to start the sound
-      window.addEventListener("click", playSleighBells);
-      window.addEventListener("touchstart", playSleighBells);
-    </script>
-    <!-- End Sleigh Bells Audio -->
-
-</body>
+   </body>
 </html>
+
 
 
 
