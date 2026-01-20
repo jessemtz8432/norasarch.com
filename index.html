@@ -821,7 +821,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const msg = messages[Math.floor(Math.random() * messages.length)];
     const isBrand = msg.includes("NORA") || msg.includes("BROW") || msg.includes("IMMOKALEE");
 
-    const size = isBrand ? rand(70, 86) : rand(48, 68);
+   const isMobile = window.innerWidth <= 768;
+
+const size = isBrand
+  ? (isMobile ? rand(42, 52) : rand(70, 86))
+  : (isMobile ? rand(30, 40) : rand(48, 68));
     const bg = isBrand ? "#cfe9f5" : colors[Math.floor(Math.random() * colors.length)];
 
     heart.style.setProperty('--size', size + 'px');
