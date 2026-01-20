@@ -16,6 +16,84 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+		
+		/* ===== Candy Hearts Overlay ===== */
+#candy-hearts{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.candy-heart{
+    position: absolute;
+  top: -70px;
+  width: var(--size);
+  height: var(--size);
+  background: var(--bg);
+  transform: rotate(-45deg);
+  border-radius: 0;              /* important: don't round the base square */
+  opacity: var(--opacity);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fall var(--dur) linear infinite;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+  isolation: isolate;
+  overflow: visible;
+}
+
+.candy-heart::before,
+.candy-heart::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;           /* same color as the heart */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* top-left lobe */
+.candy-heart::before{
+  top: -50%;
+  left: 0;
+}
+
+/* top-right lobe */
+.candy-heart::after{
+  top: 0;
+  left: 50%;
+}
+.candy-heart span{
+  position: relative;
+  z-index: 1;
+  transform: rotate(45deg);
+  width: 88%;
+  height: 88%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  font-size: calc(var(--size) / 6.2);
+  line-height: 1.05;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b0123f;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  white-space: pre-line;
+  overflow: visible;
+  word-break: normal;
+}
+@keyframes fall{
+  to {
+    transform: translate3d(var(--drift), 120vh, 0) rotate(-45deg);
+  }
+}
         /* Custom CSS for elements that need more styling */
         .hero-image {
             clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -64,6 +142,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-565RHHKK');</script>
 <!-- End Google Tag Manager -->
 <body class="font-sans bg-gray-50">
+	<!-- Candy Hearts Layer -->
+<div id="candy-hearts" aria-hidden="true"></div>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-565RHHKK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -705,6 +785,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
 
     <script>
+		// ===== Candy Hearts (always on) =====
+(function () {
+  const layer = document.getElementById('candy-hearts');
+  if (!layer) return;
+
+  const messages = [
+  "BE\nMINE",
+  "I\nLOVE\nYOU",
+  "XOXO",
+  "LOVE",
+  "SWEET",
+  "KISS\nME",
+  "HUG\nME",
+  "NORA'S\nARCH",
+  "BROW\nEXPERT",
+  ];
+  const colors = [
+    "#f9c5d1", // pink
+    "#fcd5ce", // peach
+    "#e4c1f9", // lavender
+    "#caffbf", // mint
+    "#fdffb6"  // yellow
+  ];
+
+  // Respect accessibility setting
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function rand(min, max) { return Math.random() * (max - min) + min; }
+
+  function spawn() {
+    const heart = document.createElement('div');
+    heart.className = 'candy-heart';
+
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    const isBrand = msg.includes("NORA") || msg.includes("BROW") || msg.includes("IMMOKALEE");
+
+    const size = isBrand ? rand(70, 86) : rand(48, 68);
+    const bg = isBrand ? "#cfe9f5" : colors[Math.floor(Math.random() * colors.length)];
+
+    heart.style.setProperty('--size', size + 'px');
+    heart.style.setProperty('--bg', bg);
+    heart.style.setProperty('--opacity', rand(0.65, 0.9));
+    heart.style.setProperty('--dur', rand(10, 16) + 's');
+    heart.style.setProperty('--drift', rand(-25, 25) + 'px');
+    heart.style.left = rand(0, 100) + 'vw';
+
+    const text = document.createElement('span');
+    text.textContent = msg;
+    heart.appendChild(text);
+
+    layer.appendChild(heart);
+    setTimeout(() => heart.remove(), 20000);
+  }
+
+  for (let i = 0; i < 6; i++) spawn();
+  setInterval(spawn, 1200);
+})();
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -737,39 +874,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
 
         // Form Submission (example)
-        const bookingForm = document.getElementById('booking-form');
-        const contactForm = document.getElementById('contact-form');
-        
-        bookingForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
-            bookingForm.reset();
-        });
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
+       // Form Submission (optional; only runs if the forms exist)
+const bookingForm = document.getElementById('booking-form');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+    bookingForm.reset();
+  });
+}
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    contactForm.reset();
+  });
+}
 
         // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                
-                // Close mobile menu if open
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             });
         });
-   </body>
-</html>
+</script>
 
+</body>
+</html>
 
 
 
