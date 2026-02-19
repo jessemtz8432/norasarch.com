@@ -26,51 +26,6 @@
   overflow: hidden;
 }
 
-.candy-heart{
-    position: absolute;
-  top: -70px;
-  width: var(--size);
-  height: var(--size);
-  background: var(--bg);
-  transform: rotate(-45deg);
-  border-radius: 0;              /* important: don't round the base square */
-  opacity: var(--opacity);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fall var(--dur) linear infinite;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
-  isolation: isolate;
-  overflow: visible;
-}
-
-.candy-heart::before,
-.candy-heart::after{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: inherit;           /* same color as the heart */
-  border-radius: 50%;
-  z-index: 0;
-}
-
-/* top-left lobe */
-.candy-heart::before{
-  top: -50%;
-  left: 0;
-}
-
-/* top-right lobe */
-.candy-heart::after{
-  top: 0;
-  left: 50%;
-}
-.candy-heart span{
- position: relative;
-  z-index: 1;
-  transform: rotate(45deg);
-
   width: 96%;
   height: 96%;
   padding: 0;
@@ -146,8 +101,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-565RHHKK');</script>
 <!-- End Google Tag Manager -->
 <body class="font-sans bg-gray-50">
-	<!-- Candy Hearts Layer -->
-<div id="candy-hearts" aria-hidden="true"></div>
 	<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-565RHHKK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -789,29 +742,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
 
     <script>
-		// ===== Candy Hearts (always on) =====
-(function () {
-  const layer = document.getElementById('candy-hearts');
-  if (!layer) return;
-
-  const messages = [
-  "BE\nMINE",
-  "I\nLOVE\nYOU",
-  "XOXO",
-  "LOVE",
-  "SWEET",
-  "KISS\nME",
-  "HUG\nME",
-  "NORA'S\nARCH",
-  "BROW\nEXPERT",
-  ];
-  const colors = [
-    "#f9c5d1", // pink
-    "#fcd5ce", // peach
-    "#e4c1f9", // lavender
-    "#caffbf", // mint
-    "#fdffb6"  // yellow
-  ];
 
   // Respect accessibility setting
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
